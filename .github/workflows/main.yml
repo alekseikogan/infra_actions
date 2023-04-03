@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: 1-line script
+    - run: echo It is first line!
+    
+    - name: 2-line script
+    - run: | 
+        echo It is second script!
+        echo And the last one!
+    
