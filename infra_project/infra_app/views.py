@@ -12,3 +12,7 @@ def second_page(request):
 
 def third_page(request):
     return render(request, 'infra_app/third_page.html')
+
+
+def fourth_page(request):
+    return render(request, 'infra_app/fourth_page.html')
