@@ -16,3 +16,7 @@ def third_page(request):
 
 def fourth_page(request):
     return render(request, 'infra_app/fourth_page.html')
+
+
+def fifth_page(request):
+    pass
