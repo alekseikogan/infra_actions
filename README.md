@@ -1,2 +1,2 @@
 # infra_actions
-Проект для изучения работы GitHub Actions 
+Проект для изучения работы GitHub Actions в действии
