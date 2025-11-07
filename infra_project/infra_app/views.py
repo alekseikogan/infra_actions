@@ -19,4 +19,5 @@ def fourth_page(request):
 
 
 def fifth_page(request):
+    "Без шаблона"
     pass
