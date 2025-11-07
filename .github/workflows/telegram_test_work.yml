@@ -6,10 +6,10 @@ on:
             - test_work
 
 jobs:
-    send_message:
+    send_message_to_alex:
         runs-on: ubuntu-latest
         steps:
-            - name: Send message to Telegram
+            - name: Send message to Telegram Alex
               uses: appleboy/telegram-action@master
               with:
                   to: ${{ secrets.TELEGRAM_TO }}
@@ -18,4 +18,16 @@ jobs:
                     🚀 Push в ветку: ${{ github.ref_name }} 🚀
                     Автор: ${{ github.actor }}
                     Коммит: ${{ github.sha }}
+                    Сообщение коммита: ${{ github.event.head_commit.message }}
+    
+    send_message_to_ann:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Send message to Telegram Ann
+              uses: appleboy/telegram-action@master
+              with:
+                  to: ${{ secrets.TELEGRAM_ANN }}
+                  token: ${{ secrets.TELEGRAM_TOKEN }}
+                  message: |
+                    Ваш парень сделал push в ветку: ${{ github.ref_name }} 🚀
                     Сообщение коммита: ${{ github.event.head_commit.message }}
